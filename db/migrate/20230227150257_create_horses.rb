@@ -6,9 +6,9 @@ class CreateHorses < ActiveRecord::Migration[7.0]
       t.string :breed
       t.string :specialty
       t.string :city
-      t.string :age
+      t.integer :age
       t.string :sex
-      t.string :price
+      t.integer :price
 
       t.timestamps
     end
