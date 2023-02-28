@@ -1,0 +1,21 @@
+<div class="container-fluid">
+  <div class="horse-card-grid mx-auto">
+      <% @horses.each do |horse| %>
+        <div class="horse-card">
+          <img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/ca5f8773-683e-46b9-8351-2f30f7f778e3/SEED_1.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230228%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230228T105929Z&X-Amz-Expires=86400&X-Amz-Signature=36ea52b0980d97d6432d6f1049445e9c08cfd1288dd71746d0ff793e128753d8&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22SEED%25201.png%22&x-id=GetObject" alt="" class="img-fluid">
+          <div class="d-flex justify-content-between align-items-end p-2">
+            <div class="horse-card-details">
+              <h3><%= horse.name.upcase %></h3>
+              <div class="breed">
+                🐴 <%= horse.breed.upcase %>
+              </div>
+              <div class="price">
+                🪙 <%= horse.price %>€ / J
+              </div>
+            </div>
+            <%= link_to "Voir", horse_path(horse), class: "btn-pmured" %>
+          </div>
+        </div>
+      <% end %>
+  </div>
+</div>

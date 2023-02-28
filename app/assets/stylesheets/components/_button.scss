@@ -1,0 +1,13 @@
+.btn-pmured {
+  background-color: $pmured;
+  color: white;
+  transition: .3s;
+  text-decoration: none;
+  padding: 4px 8px;
+  border-radius: 2px;
+
+  &:hover {
+    color: white;
+    background-color: $pmudarkred;
+  }
+}
