@@ -1,0 +1,54 @@
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  margin-top: -1;
+  border-bottom: greenyellow;
+}
+
+.banner .btn {
+  color: white;
+  border-radius: 50px;
+  margin: 25px;
+}
+
+.banner .btn:hover {
+  background-color: rgb(255, 255, 255);
+  color: red;
+  transition: 0.7s;
+}
+
+.banner .btn {
+  color: white;
+  border-radius: 50px;
+  margin: 25px;
+}
+
+
+.btn-success{
+  border-radius: 50px;
+  background-color: #343a40;
+  color: white;
+  border-color: white;
+  border: solid 2px;
+}
+
+.notice {
+  padding: 0;
+  margin: 0;
+}
+
+
+// .banner h1 {
+//   margin: 0;
+//   color: white;
+//   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+//   font-size: 32px;
+//   font-weight: bold;
+// }
+// .banner p {
+//   font-size: 20px;
+//   color: white;
+//   opacity: .7;
+//   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+// }
