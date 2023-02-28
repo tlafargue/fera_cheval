@@ -1,0 +1,15 @@
+<div class="card-show">
+  <div><%= image_tag("cheval.jpg") %></div>
+    <%#= image_tag @horse.photo.key %>
+    <div class="show-vertical">
+      <div class="card-details">
+        <h2 class="name-title"><strong><%= @horse.name %></strong> </h1>
+        <p><%= "C'est un #{@horse.breed} dont la spécialité est #{@horse.specialty}." %></p>
+        <p><%= "Ce cheval est un(e) #{@horse.sex} qui nous vient de #{@horse.city} et qui a actuellement #{@horse.age} ans." %></p>
+        <p><%= "Son prix de base est de #{@horse.price} euros." %></p>
+      </div>
+      <div>
+        <h2 class="form-booking"><%= "TODO: simple_form booking" %></h2>
+      </div>
+    </div>
+</div>

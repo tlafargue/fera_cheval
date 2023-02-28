@@ -1,0 +1,61 @@
+.horse-card {
+  width: 350px;
+  box-shadow: 2px 2px 8px lightgray;
+  margin: auto;
+  border-radius: 10px;
+  padding: 0;
+
+  img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  h3 {
+    margin-bottom: 0;
+  }
+}
+
+.horse-card-grid {
+  display: grid;
+  grid-gap: 16px;
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .horse-card-grid {
+    grid-template-columns: 1fr;
+    width: 350px;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .horse-card-grid {
+    grid-template-columns: 1fr;
+    width: 350px;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .horse-card-grid {
+    grid-template-columns: 1fr 1fr;
+    width: 716px;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .horse-card-grid {
+    grid-template-columns: 1fr 1fr;
+    width: 716px;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .horse-card-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 1082px;
+  }
+}
