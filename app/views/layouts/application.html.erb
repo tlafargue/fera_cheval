@@ -11,6 +11,23 @@
   </head>
 
   <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-success">
+      <a class="navbar-brand" href="/">
+        <%= image_tag('logo.jpg', size: '50')%>
+      </a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+          </li>
+          <li class="nav-item">
+          </li>
+          <div class="navbar-button">
+            <%= link_to "S'inscrire", owner_horses_path, class: "btn btn-success mr-3" %>
+            <%= link_to "Se connecter", owner_horses_path, class: "btn btn-success ml-3" %>
+          </div>
+        </ul>
+      </div>
+    </nav>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
