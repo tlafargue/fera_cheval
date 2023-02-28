@@ -1,0 +1,11 @@
+<% @horses.each do |horse| %>
+  <div class="card-product">
+    <img src="https://images.unsplash.com/photo-1598974357801-cbca100e65d3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" />
+    <div class="card-product-infos">
+      <h2><%= horse.name %></h2>
+      <p><strong><%= horse.specialty %></strong></p>
+      <p><em><%= horse.breed %></em></p>
+      <p><%= horse.price %></p>
+    </div>
+  </div>
+<% end %>
