@@ -1,0 +1,85 @@
+<div class="container mt-5">
+  <h1 id="form_title">AJOUTER UN CHEVAL</h1>
+    <%= simple_form_for @horse do |f| %>
+  <div class="container">
+    <div class="row">
+      <div class="col-6">
+        <%= f.input :user, label:"Nom du propiétaire", placeholder:"Anna"  %>
+      </div>
+      <div class="col-6">
+        <%= f.input :name, label:"Prénom", placeholder:"Hugo"  %>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-6">
+        <%= f.input :breed, label:"Race", placeholder:"Pur-sang"  %>
+      </div>
+      <div class="col-6">
+        <%= f.input :specialty, label:"Specialitée", placeholder:"Promenade / Trait ..."%>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-4">
+        <%= f.input :city, label:"Localisation", placeholder:"Ville"%>
+      </div>
+
+      <div class="col-4">
+        <%= f.input :sex, collection:["Mâle", "Femelle"], label:"Sexe", selected:"Mâle" %>
+      </div>
+
+      <div class="col-4">
+        <%= f.input :price, label:"Prix", placeholder:"€"%>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="container">
+    <div class="mb-3">
+      <%= f.input :photo, as: :file %>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-1">
+        <%= f.submit class:"btn btn-pmured mt-4"%>
+      </div>
+        <div class="col-1">
+        </div>
+        <div class="col-1">
+        </div>
+        <div class="col-1">
+        </div>
+        <div class="col-1">
+        </div>
+        <div class="col-1">
+        </div>
+        <div class="col-1">
+        </div>
+        <div class="col-1">
+        </div>
+        <div class="col-1">
+        </div>
+        <div class="col-1">
+        </div>
+        <div class="col-1">
+        </div>
+      <div class="col-1">
+        <%= link_to "Retour", owner_horses_path,  class:"btn btn-pmured mt-4"%>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
