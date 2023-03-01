@@ -10,3 +10,17 @@
 .navbar-lewagon .navbar-brand img {
   width: 60px;
 }
+
+.logo-font {
+  font-family: $logo-font;
+  font-size: 28px;
+}
+
+.nav-link-pmu {
+  color: white;
+  text-decoration: none;
+
+  &:hover {
+    color: $success;
+  }
+}
