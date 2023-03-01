@@ -11,19 +11,22 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.status = "pending"
 
-    date1 = Date.new(@booking.start_date)
-    date2 = Date.new(@booking.end_date)
+    date1 = @booking.start_date
+    date2 = @booking.end_date
     nb_jour = (date2 - date1).to_i
 
     if nb_jour > 0
       @booking.total_price = nb_jour * @horse.price
       if @booking.save
+        flash[:notice] = "Votre demande de location a été envoyée"
         redirect_to horse_path(@booking.horse_id)
       else
-        render :new, status: :unprocessable_entity
+        flash.now[:alert] = "Votre demande de location n'a pas pu être envoyée"
+        render "horses/show", status: :unprocessable_entity
       end
     else
-      render :new, status: :unprocessable_entity
+      flash.now[:alert] = "Demande de location trop courte !"
+      render "horses/show", status: :unprocessable_entity
     end
   end
 
