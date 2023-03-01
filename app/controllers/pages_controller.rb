@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
   def home
-    @horses = Horse.all
+    @horses = Horse.first(3)
   end
 end
