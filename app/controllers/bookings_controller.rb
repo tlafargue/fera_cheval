@@ -1,4 +1,4 @@
-class Horse::BookingsController < ApplicationController
+class BookingsController < ApplicationController
   before_action :set_horse, only: [:new, :create]
 
   def new
