@@ -1,15 +1,43 @@
 <div class="card-show">
-  <div><%= image_tag("cheval.jpg") %></div>
-    <%#= image_tag @horse.photo.key %>
-    <div class="show-vertical">
-      <div class="card-details">
-        <h2 class="name-title"><strong><%= @horse.name %></strong> </h1>
-        <p><%= "C'est un #{@horse.breed} dont la spécialité est #{@horse.specialty}." %></p>
-        <p><%= "Ce cheval est un(e) #{@horse.sex} qui nous vient de #{@horse.city} et qui a actuellement #{@horse.age} ans." %></p>
-        <p><%= "Son prix de base est de #{@horse.price} euros." %></p>
-      </div>
-      <div>
-        <h2 class="form-booking"><%= "TODO: simple_form booking" %></h2>
+  <div>
+    <%= cl_image_tag @horse.photo.key, class:"img-cheval" %>
+  </div>
+
+  <div class="show-vertical">
+    <div class="card-details">
+      <h1 class="name-title"><strong><%= @horse.name %></strong> </h1>
+      <div class="paragraphe">
+        <h3><strong><%= "#{@horse.breed} | #{@horse.specialty}" %></strong></h3>
+        <p><%= "Ce cheval est un(e) #{@horse.sex} qui est originaire de la ville de #{@horse.city}. Le propriétaire"%> <strong><%="#{@horse.user.name}"%></strong> <%="nous informe que ce chavel est agé d'environ" %> <strong><%="#{@horse.age}"%></strong> <%= "ans.
+        C'est un cheval très docile joyeux, aux allures de cheval"%></p>
       </div>
     </div>
+
+    <div class="container-form">
+      <h1 class="name-title" id="form_title">Réservation</h1>
+        <%= simple_form_for [@horse, @booking] do |f| %>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <%= f.input :start_date, label:"Date de départ", placeholder:"17/03/2023" %>
+          </div>
+          <div class="col-6">
+            <%= f.input :end_date, label:"Date de retour", placeholder:"23/03/2023" %>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-6 ">
+            <p ><strong class="gras"><%= "#{@horse.price}€"%></strong><%= "/ Jour" %></p>
+          </div>
+          <div class="col-6  d-flex justify-content-end">
+            <%= f.submit class:"btn btn-pmured mt-4"%>
+          </div>
+        </div>
+          <% end %>
+      </div>
+    </div>
+
+  </div>
 </div>
