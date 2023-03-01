@@ -2,8 +2,7 @@
   background-size: cover;
   background-position: top;
   padding-left: 100px;
-  padding-top: 100px;
-  padding-bottom: 150px;
+  padding-block: 100px;
   border-bottom: greenyellow;
   h1, h2 {
     color: white;
@@ -22,6 +21,8 @@
 
   a {
     margin-left: 12px;
+    border-radius: 12px;
+    padding: 18px 36px;
   }
 }
 
