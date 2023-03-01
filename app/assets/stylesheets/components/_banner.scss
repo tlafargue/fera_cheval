@@ -1,9 +1,28 @@
 .banner {
   background-size: cover;
   background-position: top;
-  padding: 300px 0;
-  margin-top: -1;
+  padding-left: 100px;
+  padding-top: 100px;
+  padding-bottom: 150px;
   border-bottom: greenyellow;
+  h1, h2 {
+    color: white;
+    font-family: FerroRosso;
+    margin-block: 0;
+    margin-bottom: -25px;
+  }
+
+  h1 {
+    font-size: 128px;
+  }
+
+  h2 {
+    padding-left: 12px;
+  }
+
+  a {
+    margin-left: 12px;
+  }
 }
 
 .banner .btn {
