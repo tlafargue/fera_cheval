@@ -1,5 +1,4 @@
 <div class="card-show">
-
   <div class="show-vertical">
 
     <div class="card-format">
@@ -23,40 +22,38 @@
           <h1 class="name-title-describ"><strong><%= "Description" %></strong> </h1>
           <p class="paragraphedescrib"><%= "Bonjour, je loue mon cheval pour vos evenements festifs" %></p>
         </div>
-
     </div>
 
     <div class="card-format2">
       <%= image_tag "fondback.jpg" %>
-
-
-
-        <div id="cardformat2pagging">
-          <h1 class="name-title"><strong>Réservation</strong></h1>
-          <%= simple_form_for [@horse, @booking] do |f| %>
-            <div class="container">
-              <div class="row">
-                  <%= f.input :end_date, label:"Date de retour", placeholder:"23/03/2023" %>
-                  <%= f.input :start_date, label:"Date de départ", placeholder:"17/03/2023" %>
-              </div>
-              <div class="row">
+         <div id="cardformat2pagging" data-controller="price" data-price="<%= @horse.price %>">
+            <h1 class="name-title"><strong>Réservation</strong></h1>
+            <%= simple_form_for [@horse, @booking] do |f| %>
+              <div class="container">
+                <div class="row">
+                  <%= f.input :start_date, as: :date, label:"Date de départ", placeholder:"17/03/2023", html5: true, input_html: { data: { "price-target": "startDate", action: "change->price#result" } } %>
+                  <%= f.input :end_date, as: :date, label:"Date de retour", placeholder:"23/03/2023", html5: true, input_html: { data: { "price-target": "endDate", action: "change->price#result" } } %>
+                </div>
+                <div class="row">
                   <div class="col-6 ">
                     <p ><strong><%= "#{@horse.price}€"%></strong><%= "/ Jour" %></p>
                   </div>
                   <div class="col-6  d-flex justify-content-end">
                     <%= f.submit class:"btn btn-pmured mt-4"%>
                   </div>
+                </div>
+                <% end %>
               </div>
-              <% end %>
-            </div>
-        </div>
-
-
-
+          </div>
+      <div>
+        <h2 data-price-target="priceTag">-- €</h2>
+      </div>
     </div>
-
   </div>
+  
+  
   <div>
     <%= cl_image_tag @horse.photo.key, class:"img-cheval" %>
   </div>
+  
 </div>
