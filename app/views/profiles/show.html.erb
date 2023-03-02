@@ -1,40 +1,53 @@
 <div class="container mt-3">
   <div class="row">
     <div class="col-md-8 mt-4">
-      <h1>Profil de <%= @user.name %></h1>
-      <% @user.bookings.each do |booking| %>
-      <%= raise %>
+      <div></div>
+      <h1 class>Profil de <%= @user.name %></h1>
+      <% @user.bookings.order(start_date: :desc).each do |booking| %>
       <div class="card-reservation w-100 my-5 ">
-        <div class="card-body">
-          <h3 class="card-title"><strong>Réservation</strong></h5>
-          <p class="card-text">Du <%= booking.start_date%> au <%= booking.end_date%>.</p>
-          <p class="card-text"> <strong><%= booking.horse.name%>, <%= booking.horse.breed %></strong></p>
-          <h5 class="card-text"><strong><%= booking.total_price%>€</strong></h5>
-          <p class="card-text justify-content-end"><%= booking.status.upcase%></p>
-          <%= cl_image_tag booking.horse.photo.key, height: 200, width: 200, crop: :fill %>
-          <a href="#" class="btn btn-danger text-white d-inline-flex p-2">Voir la réservation</a>
+        <div class="card-body d-flex">
+          <div>
+            <h3 class="card-text"><strong>Réservation</strong></h5>
+            <%= cl_image_tag booking.horse.photo.key, height: 200, width: 200, crop: :fill %>
+          </div>
+          <div class='card-reservation-infos'>
+            <p class="card-text mt-1">Du <%= booking.start_date%></p>
+            <p class="card-text">Au <%= booking.end_date%></p>
+            <p class="card-text"> <strong><%= booking.horse.name%>, <%= booking.horse.breed %></strong></p>
+            <h5 class="card-text"><strong><%= booking.total_price%>€</strong></h5>
+            <p class="card-text justify-content-end"><%= booking.status.upcase%></p>
+            <a href="#" class="btn btn-danger text-white">Voir la réservation</a>
+          </div>
+          </div>
+            <div class ="validation-button d-flex mt-2">
+              <%= button_to "Approve", accept_owner_booking_path(booking), method: :patch, class: "btn btn-primary" %>
+              <%= button_to "Decline", decline_owner_booking_path(booking), method: :patch, class: "btn btn-danger" %>
+            </div>
+          </div>
         </div>
       </div>
       <% end %>
     </div>
-    <div class="col-md-4 mt-4">
-      <h1 class="">Informations</h1>
+    <div class="col-md-4 mt-3">
+      <div class="mx-3">
+        <h1>Informations</h1>
+      </div>
       <div class="container d-flex justify-content-center align-items-center">
         <div class="card mt-5">
           <div class="text-center mt-4">
             <%= cl_image_tag @user.photo.key, class: "avatar-large", width: "80" %>
           </div>
-          <div class="text-center mt-3">
+          <div class="text-center mt-4">
             <h4 class="mb-0"><%= @user.name%> </h4>
             <button class="btn btn-pmured mt-3">Voir mes cheveaux</button>
             <div class="d-flex justify-content-between align-items-center px-4">
               <div class="stats">
                 <h6 class="mb-0">Nombre de cheveaux</h6>
-                <span>4</span>
+                <span><%= @user.horse_ids.count %></span>
               </div>
               <div class="stats m-4">
                 <h6 class="mb-0">Mes réservations</h6>
-                <span>42</span>
+                <span><%=@user.bookings.count %> </span>
               </div>
             </div>
           </div>
@@ -46,23 +59,26 @@
 
 
 
-<div class="container mt-3">
-  <h1>Réservation précédentes</h1>
-  <% @user.horses.each do |horse| %>
-
-  <div class="row">
-    <div class="col-md-3 mt-2">
-      <div class="card-group">
-        <div class="card-bookings">
-          <img class="card-img-top" src="https://cdn.pixabay.com/photo/2021/01/30/15/14/akita-5964180_1280.jpg" alt="Card image">
-          <div class="card-body">
-            <h5 class="card-title mt-2"><strong><%= horse.name %></strong></h5>
-            <p class="card-text"><em><%= horse.breed %></em></p>
-            <button type="button" class="btn btn-danger text-white mt-4 mb-2">Voir le cheval</button>
+<div class="container">
+  <h1 class="mt-5">Mes reservations précendentes</h1>
+  <div class="horse-card-grid mx-auto my-5">
+      <% @booking_received.each do |booking| %>
+        <a href="<%= horse_path(booking.horse) %>" class="horse-card">
+          <%= cl_image_tag booking.horse.photo.key, class: "img-fluid" %>
+            <div class="horse-card-details p-4">
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <h3><strong><%= booking.horse.name %></strong></h3>
+                  <div class="breed">
+                    🐴 <%= booking.horse.breed %>
+                  </div>
+                </div>
+                <div class="price">
+                  <%= booking.total_price %>€
+                </div>
+              </div>
           </div>
-        </div>
-      </div>
-    </div>
+        </a>
+      <% end %>
   </div>
-  <% end %>
 </div>
