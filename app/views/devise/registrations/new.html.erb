@@ -20,7 +20,8 @@
     </div>
 
     <div class="form-actions">
-      <%= f.button :submit, "S'inscrire", class: 'btn-pmured' %>
+      <%= f.button :submit, "S'inscrire", class: 'btn-pmured mb-3' %>
     </div>
   <% end %>
+  <%= link_to "Déja inscrit ? Cliquez ici pour vous connecter.", new_user_session_path, class: 'pmured-link' %>
 </div>
