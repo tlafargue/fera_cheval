@@ -1,17 +1,16 @@
-<div class="container mt-5">
+<div class="small-form mt-5">
   <h1 id="form_title">AJOUTER UN CHEVAL</h1>
     <%= simple_form_for @horse do |f| %>
-  <div class="container">
+  <div class="container mt-4">
     <div class="row">
       <div class="col-6">
-        <%= f.input :user, label:"Nom du propiétaire", placeholder:"Anna"  %>
+        <%= f.input :name, label:"Nom", placeholder:"Hugo"  %>
       </div>
       <div class="col-6">
-        <%= f.input :name, label:"Prénom", placeholder:"Hugo"  %>
+        <%= f.input :photo, as: :file %>
       </div>
     </div>
   </div>
-
   <div class="container">
     <div class="row">
       <div class="col-6">
@@ -22,9 +21,6 @@
       </div>
     </div>
   </div>
-
-
-
   <div class="container">
     <div class="row">
       <div class="col-4">
@@ -40,46 +36,13 @@
       </div>
     </div>
   </div>
-
-
-
-
-
-  <div class="container">
-    <div class="mb-3">
-      <%= f.input :photo, as: :file %>
-    </div>
-  </div>
-
   <div class="container">
     <div class="row">
-      <div class="col-1">
-        <%= f.submit class:"btn btn-pmured mt-4"%>
-      </div>
-        <div class="col-1">
-        </div>
-        <div class="col-1">
-        </div>
-        <div class="col-1">
-        </div>
-        <div class="col-1">
-        </div>
-        <div class="col-1">
-        </div>
-        <div class="col-1">
-        </div>
-        <div class="col-1">
-        </div>
-        <div class="col-1">
-        </div>
-        <div class="col-1">
-        </div>
-        <div class="col-1">
-        </div>
-      <div class="col-1">
-        <%= link_to "Retour", owner_horses_path,  class:"btn btn-pmured mt-4"%>
-      </div>
-      <% end %>
+        <%= f.submit class:"btn btn-pmured mt-4 pull-right"%>
+    </div>
+    <div class="row text-center mt-3">
+      <%= link_to "Retour à l'écurie", owner_horses_path, class: "pmured-link" %>
     </div>
   </div>
 </div>
+<% end %>

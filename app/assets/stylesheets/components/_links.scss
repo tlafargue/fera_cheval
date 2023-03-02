@@ -1,0 +1,23 @@
+.pmured-link {
+  color: $pmured;
+
+  &:hover {
+    color: $pmudarkred;
+  }
+}
+
+.pmugreen-link {
+  color: $green;
+
+  &:hover {
+    color: $darkgreen;
+  }
+}
+
+.text-pmured {
+  color: $pmured;
+}
+
+.text-pmugreen {
+  color: $darkgreen;
+}
