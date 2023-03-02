@@ -60,7 +60,10 @@ un = Horse.create(
   city: 'Rennes',
   age: 6,
   sex: 'femelle',
-  price: 150
+  price: 100,
+  description: 'Mixame est une magnifique jument de race des "Sauteurs". C est une jument au tempérament.
+  Fougueuse, joueuse et perspicace. Elle est très intelligente et capable de lire des livres.
+  Elle sera parfaite pour tous vos événements en relation avec le saut !'
 )
 photo = URI.open("https://lafargue.cc/horses/C1.png")
 un.photo.attach(io: photo, filename: "maxime_d.png", content_type: "image/png")
@@ -75,8 +78,11 @@ deux = Horse.create(
   specialty: 'Cheval de trait',
   city: 'Rennes',
   age: 12,
-  sex: 'femelle',
-  price: 120
+  sex: 'mâle',
+  price: 250,
+  description: 'Sa particularité ? Il a fait plusieurs tournages de films, retenu notamment pour ceux en noir et blanc.
+  Ce héros à déjà tourné dans des films tels que "Madagascar 1","Madagascar 2","Madagascar 3" et
+  "Alibi 2"(en tant que figurant) !'
 )
 photo = URI.open("https://lafargue.cc/horses/C2.png")
 deux.photo.attach(io: photo, filename: "tornado.png", content_type: "image/png")
@@ -92,7 +98,9 @@ trois = Horse.create(
   city: 'Paris',
   age: 7,
   sex: 'mâle',
-  price: 150
+  price: 125,
+  description: 'Cacahuète est un bel étalon bien membré, avec une belle rose grise flamboyante !
+  Il sera parfait pour vous accompagner à vos apéros. C est un cheval spécialement conçu pour porter vos courses !'
 )
 photo = URI.open("https://lafargue.cc/horses/C3.png")
 trois.photo.attach(io: photo, filename: "cacahuete.png", content_type: "image/png")
@@ -108,7 +116,11 @@ quatre = Horse.create(
   city: 'Versaille',
   age: 5,
   sex: 'femelle',
-  price: 100
+  price: 175,
+  description: 'Galopin est un magnifique cheval de race Frison.
+  Il a une robe brune profonde et un tempérament doux.
+  Avec son pas cadencé et sa démarche élégante, elle est parfaite pour les promenades en forêt ou
+  les randonnées paisibles.'
 )
 photo = URI.open("https://lafargue.cc/horses/C4.png")
 quatre.photo.attach(io: photo, filename: "marguerite.png", content_type: "image/png")
@@ -124,7 +136,9 @@ cinq = Horse.create(
   city: 'Saint-Vergeron',
   age: 6,
   sex: 'mâle',
-  price: 220
+  price: 250,
+  description: 'Je mets à louer mon petit Roger, enfin petit... Il est beau, gentil et
+  adore le cosplay et notamment son héros préférer "Robin des pintes."'
 )
 photo = URI.open("https://lafargue.cc/horses/C5.png")
 cinq.photo.attach(io: photo, filename: "roger.png", content_type: "image/png")
@@ -140,7 +154,10 @@ six = Horse.create(
   city: 'Angers',
   age: 10,
   sex: 'mâle',
-  price: 180
+  price: 350,
+  description: 'George est un cheval de course, qui n a jamais connu la défaite.
+  Il humilie tous ses adversaires d une centaine de mettre.
+  Avec ces derniers gains, il s est même offert une Rolex !'
 )
 photo = URI.open("https://lafargue.cc/horses/C6.png")
 six.photo.attach(io: photo, filename: "georges.png", content_type: "image/png")
@@ -156,7 +173,10 @@ sept = Horse.create(
   city: 'Poudlard',
   age: 1664,
   sex: 'femelle',
-  price: 120
+  price: 750,
+  description: 'Cé une othentik lit-corne, pas de preuve d achat à l appuie, mé je vous le certifie !
+  Je la mé à loué car askip ca rapporte pas mal, et en ce moment
+  jé besoin de thune pour payer mon loyer et mes conso perso'
 )
 photo = URI.open("https://lafargue.cc/horses/C7.png")
 sept.photo.attach(io: photo, filename: "brenda.png", content_type: "image/png")
@@ -172,7 +192,9 @@ huit = Horse.create(
   city: 'Lampaul',
   age: 10,
   sex: 'mâle',
-  price: 120
+  price: 75,
+  description: 'Je loue mon propriétaire pour la modite somme de 75€, car en vrai dans le fond il est gentil,
+  mais il ne sait pas faire grand chose dans le fond'
 )
 photo = URI.open("https://lafargue.cc/horses/C8.png")
 huit.photo.attach(io: photo, filename: "jeanmimi.png", content_type: "image/png")
@@ -188,7 +210,9 @@ neuf = Horse.create(
   city: 'Angers',
   age: 6,
   sex: 'mâle',
-  price: 100
+  price: 150,
+  description: 'Loue jolie cheval pour des prestations mariages, anniversaires, séminaires, enterrement, barmitzva,
+  repas de foot, sainte-barbe, festivale, concert, gala, parade.'
 )
 photo = URI.open("https://lafargue.cc/horses/C9.png")
 neuf.photo.attach(io: photo, filename: "simba.png", content_type: "image/png")
@@ -204,7 +228,9 @@ dix = Horse.create(
   city: 'Nantes',
   age: 10,
   sex: 'mâle',
-  price: 140
+  price: 50,
+  description: 'Je loue mon petit Mickey, un cheval blanc, sans trop d avenir,
+  c est aussi pour ca que le mes à louer pour des promenades'
 )
 photo = URI.open("https://lafargue.cc/horses/C10.png")
 dix.photo.attach(io: photo, filename: "mickey.png", content_type: "image/png")
@@ -220,7 +246,9 @@ onze = Horse.create(
   city: 'Limoges',
   age: 12,
   sex: 'mâle',
-  price: 120
+  price: 109,
+  description: 'Hugo est un cheval très symape, il sait faire à manger et adore par dessus tout faire la vaisselle.
+  La photo ne le met pas à son avantage mais c est la réalité il est moche... Mais il est gentil, mais moche...'
 )
 photo = URI.open("https://lafargue.cc/horses/C11.png")
 onze.photo.attach(io: photo, filename: "bernadette.png", content_type: "image/png")
@@ -235,8 +263,11 @@ douze = Horse.create(
   specialty: 'Promenade',
   city: 'Vannes',
   age: 9,
-  sex: 'mâle',
-  price: 130
+  sex: 'femelle',
+  price: 163,
+  description: 'Hugo est une jument vraiment très symape, elle est gracieuse et prestigieuse.
+  Elle est douce et affectueuse, et convient parfaitement aux cavaliers débutants ou aux familles à la
+  recherche dune expérience de cheval tranquille.'
 )
 photo = URI.open("https://lafargue.cc/horses/C12.png")
 douze.photo.attach(io: photo, filename: "franck.png", content_type: "image/png")
@@ -252,7 +283,9 @@ treize = Horse.create(
   city: 'Dunkerque',
   age: 8,
   sex: 'femelle',
-  price: 200
+  price: 200,
+  description: 'Je met à louer Lolita une jument de "petite-taille" dédier à un public de "petite-taille",
+  je fournis également un escabeau avec !'
 )
 photo = URI.open("https://lafargue.cc/horses/C13.png")
 treize.photo.attach(io: photo, filename: "lolita.png", content_type: "image/png")
