@@ -1,43 +1,62 @@
 <div class="card-show">
-  <div>
-    <%= cl_image_tag @horse.photo.key, class:"img-cheval" %>
-  </div>
 
   <div class="show-vertical">
-    <div class="card-details">
-      <h1 class="name-title"><strong><%= @horse.name %></strong> </h1>
-      <div class="paragraphe">
-        <h3><strong><%= "#{@horse.breed} | #{@horse.specialty}" %></strong></h3>
-        <p><%= "Ce cheval est un(e) #{@horse.sex} qui est originaire de la ville de #{@horse.city}. Le propriétaire"%> <strong><%="#{@horse.user.name}"%></strong> <%="nous informe que ce chavel est agé d'environ" %> <strong><%="#{@horse.age}"%></strong> <%= "ans.
-        C'est un cheval très docile joyeux, aux allures de cheval"%></p>
-      </div>
-    </div>
 
-    <div class="container-form">
-      <h1 class="name-title" id="form_title">Réservation</h1>
-        <%= simple_form_for [@horse, @booking] do |f| %>
-
-      <div class="container">
-        <div class="row">
-          <div class="col-6">
-            <%= f.input :start_date, label:"Date de départ", placeholder:"17/03/2023" %>
-          </div>
-          <div class="col-6">
-            <%= f.input :end_date, label:"Date de retour", placeholder:"23/03/2023" %>
+    <div class="card-format">
+      <%= image_tag "aaa.jpg" %>
+        <div id="cardformatpagging">
+          <h1 class="name-title"><strong><%= @horse.name %></strong> </h1>
+          <div class="paragraphe">
+            <h3 class="sous-title"><strong style="color: black;"><%= "#{@horse.breed}" %></strong><%=" | #{@horse.specialty} |" %></h3>
+              <ul class="orgalist" id="listicone">
+                <li><i class="fa-solid fa-cake-candles fa-xl fontawseomeform"></i><%="   #{@horse.age}"%>ans</li>
+                <li><i class="fa-solid fa-user fa-xl fontawseomeform"></i><%="   #{@horse.user.name}"%></li>
+                <li><i class="fa-solid fa-venus-mars fa-xl"></i> <%="     #{@horse.sex}"%></li>
+                <li><i class="fa-solid fa-city fa-xl"></i> <%="    #{@horse.city}"%></li>
+              </ul>
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-6 ">
-            <p ><strong class="gras"><%= "#{@horse.price}€"%></strong><%= "/ Jour" %></p>
-          </div>
-          <div class="col-6  d-flex justify-content-end">
-            <%= f.submit class:"btn btn-pmured mt-4"%>
-          </div>
+        <div class="separation"></div>
+
+        <div class="name-title-description">
+          <h1 class="name-title-describ"><strong><%= "Description" %></strong> </h1>
+          <p class="paragraphedescrib"><%= "Bonjour, je loue mon cheval pour vos evenements festifs" %></p>
         </div>
-          <% end %>
-      </div>
+
     </div>
 
+    <div class="card-format2">
+      <%= image_tag "fondback.jpg" %>
+
+
+
+        <div id="cardformat2pagging">
+          <h1 class="name-title"><strong>Réservation</strong></h1>
+          <%= simple_form_for [@horse, @booking] do |f| %>
+            <div class="container">
+              <div class="row">
+                  <%= f.input :end_date, label:"Date de retour", placeholder:"23/03/2023" %>
+                  <%= f.input :start_date, label:"Date de départ", placeholder:"17/03/2023" %>
+              </div>
+              <div class="row">
+                  <div class="col-6 ">
+                    <p ><strong><%= "#{@horse.price}€"%></strong><%= "/ Jour" %></p>
+                  </div>
+                  <div class="col-6  d-flex justify-content-end">
+                    <%= f.submit class:"btn btn-pmured mt-4"%>
+                  </div>
+              </div>
+              <% end %>
+            </div>
+        </div>
+
+
+
+    </div>
+
+  </div>
+  <div>
+    <%= cl_image_tag @horse.photo.key, class:"img-cheval" %>
   </div>
 </div>
