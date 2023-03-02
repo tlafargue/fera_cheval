@@ -13,6 +13,24 @@
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
+.booking-card {
+  box-shadow: 2px 2px 8px lightgray;
+  border-radius: 12px;
+  padding: 0;
+  text-decoration: none;
+  color: black;
+
+  img {
+    height: 75px;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+  }
+
+  h3, p {
+    margin-bottom: 0;
+  }
+}
+
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
