@@ -4,8 +4,8 @@ export default class extends Controller {
   static targets = ["startDate", "endDate", "priceTag"]
 
   connect() {
-    console.log(this.startDateTarget.value)
-    console.log(this.endDateTarget.value)
+    // console.log(this.startDateTarget.value)
+    // console.log(this.endDateTarget.value)
 
   }
 
@@ -23,6 +23,8 @@ export default class extends Controller {
     const basePrice = this.element.dataset.price
     const total =( time * basePrice)/86400000
     // console.log(total)
-    this.priceTagTarget.innerHTML = `${total} €`
+    if (this.endDateTarget.value && this.startDateTarget.value) {
+      this.priceTagTarget.innerHTML = `${total} €`
+    }
   }
 }
