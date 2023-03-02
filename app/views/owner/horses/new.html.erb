@@ -1,10 +1,13 @@
 <div class="small-form mt-5">
   <h1 id="form_title">AJOUTER UN CHEVAL</h1>
-    <%= simple_form_for @horse do |f| %>
+    <%= simple_form_for @horse, url: owner_horses_path do |f| %>
   <div class="container mt-4">
     <div class="row">
-      <div class="col-6">
+      <div class="col-4">
         <%= f.input :name, label:"Nom", placeholder:"Hugo"  %>
+      </div>
+      <div class="col-2">
+        <%= f.input :age, label:"Age", placeholder:"11"  %>
       </div>
       <div class="col-6">
         <%= f.input :photo, as: :file %>
@@ -34,6 +37,11 @@
       <div class="col-4">
         <%= f.input :price, label:"Prix", placeholder:"€"%>
       </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <%= f.input :description %>
     </div>
   </div>
   <div class="container">
