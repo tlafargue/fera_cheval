@@ -1,5 +1,8 @@
 <div class="container">
-  <h1 class="mt-5">Nos chevaux</h1>
+  <div class="mt-5 offset-lg-1">
+    <h1>Nos chevaux 🐎</h1>
+    <h3>Louer un cheval <span data-controller="typed-js"></span></h3>
+  </div>
   <div class="horse-card-grid mx-auto my-5">
       <% @horses.each do |horse| %>
         <a href="<%= horse_path(horse) %>" class="horse-card">
