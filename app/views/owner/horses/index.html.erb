@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="d-flex justify-content-between items-align-center mt-5 offset-lg-1 col-lg-10">
+    <div>
+      <h1>L'écurie 🏇</h1>
+      <h3>Voici les chevaux que vous avez enregistré chez nous...</h3>
+    </div>
+    <%= link_to "AJOUTER UN CHEVAL", new_owner_horse_path, class: 'btn-pmured align-self-center' %>
+  </div>
+  <div class="horse-card-grid mx-auto my-5">
+      <% @horses.each do |horse| %>
+        <a href="<%= horse_path(horse) %>" class="horse-card">
+          <%= cl_image_tag horse.photo.key, class: "img-fluid" %>
+            <div class="horse-card-details p-4">
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <h3><%= horse.name.upcase %></h3>
+                  <div class="breed">
+                    🐴 <%= horse.breed.upcase %>
+                  </div>
+                </div>
+                <div class="price">
+                  <%= horse.price %>€ / J
+                </div>
+              </div>
+          </div>
+        </a>
+      <% end %>
+  </div>
+</div>

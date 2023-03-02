@@ -12,6 +12,10 @@ class Owner::HorsesController < ApplicationController
     end
   end
 
+  def index
+    @horses = current_user.horses
+  end
+
   private
 
   def horse_params
