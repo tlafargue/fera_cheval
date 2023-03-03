@@ -7,7 +7,7 @@
           <%= cl_image_tag booking.horse.photo.key, class: "img-fluid" %>
           <div class="d-flex w-100 justify-content-around align-items-center">
             <h3> <%=booking.horse.name%></h3>
-            <p><i class="fa-regular fa-calendar text-pmured"></i> <%= booking.start_date %> - <%= booking.end_date %></p>
+            <p><i class="fa-regular fa-calendar text-pmured"></i> <%= booking.start_date.strftime("%d/%m/%Y") %> - <%= booking.end_date.strftime("%d/%m/%Y") %></p>
             <p class="h5 text-pmured"><%= booking.total_price%>€</p>
             <% if current_user == booking.horse.user %>
               <% if booking.status == "pending" %>
@@ -38,7 +38,7 @@
           </div>
           <div class="text-center mt-4">
             <h4 class="mb-0"><%= @user.name%> </h4>
-            <button class="btn btn-pmured mt-3">Voir mes cheveaux</button>
+            <p><%= link_to "Voir mes cheveaux", owner_horses_path, class: "pmured-link", class: "btn btn-pmured mt-3"%></p>
             <div class="d-flex justify-content-between align-items-center px-4">
               <div class="stats">
                 <h6 class="mb-0">Nombre de cheveaux</h6>
