@@ -9,24 +9,5 @@
     <h2 class="h1">Chevaux vedettes 🐎</h1>
     <h3>La sélection des chevaux les plus prisés</h2>
   </div>
-  <div class="horse-card-grid mx-auto my-5">
-      <% @horses.each do |horse| %>
-        <a href="<%= horse_path(horse) %>" class="horse-card">
-          <%= cl_image_tag horse.photo.key, class: "img-fluid" %>
-            <div class="horse-card-details p-4">
-              <div class="d-flex justify-content-between align-items-center">
-                <div>
-                  <h3><%= horse.name.upcase %></h3>
-                  <div class="breed">
-                    🐴 <%= horse.breed.upcase %>
-                  </div>
-                </div>
-                <div class="price">
-                  <%= horse.price %>€ / J
-                </div>
-              </div>
-          </div>
-        </a>
-      <% end %>
-  </div>
+  <%= render 'shared/horse_card_grid' %>
 </div>
