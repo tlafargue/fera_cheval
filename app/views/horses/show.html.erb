@@ -2,7 +2,7 @@
   <div class="show-vertical">
 
     <div class="card-format">
-      <%= image_tag "aaa.jpg" %>
+      <%= image_tag "fondback.jpg" %>
         <div id="cardformatpagging">
           <h1 class="name-title"><strong><%= @horse.name %></strong> </h1>
           <div class="paragraphe">
@@ -20,7 +20,7 @@
 
         <div class="name-title-description">
           <h1 class="name-title-describ"><strong><%= "Description" %></strong> </h1>
-          <p class="paragraphedescrib"><%= "Bonjour, je loue mon cheval pour vos evenements festifs" %></p>
+          <p class="paragraphedescrib"><%= "#{@horse.description}" %></p>
         </div>
     </div>
 
@@ -37,7 +37,7 @@
                 <div class="row">
                   <div class="col-6 ">
                     <p ><strong><%= "#{@horse.price}€"%></strong><%= "/ Jour" %></p>
-                    <div>
+                    <div id="margin0">
                       <h2 data-price-target="priceTag">--€</h2>
                     </div>
                   </div>
@@ -52,7 +52,7 @@
   </div>
 
 
-  <div>
+  <div class="format">
     <%= cl_image_tag @horse.photo.key, class:"img-cheval" %>
   </div>
 

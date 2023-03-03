@@ -5,47 +5,45 @@
   margin-left: 20px;
 }
 .img-cheval {
-  margin-right: 20px;
-  margin-top: 20px;
-  margin-bottom: 20px;
   border-radius: 15px;
-  height: 800px;
-  width: 800px;
-  background-size: cover;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
   box-shadow: 3px 3px 15px rgba(0,0,0,0.2);
+}
+
+.format {
+  padding: 20px;
+  padding-left: 0px;
+  width: 40%;
 }
 
 // DIV //
 .show-vertical {
-  margin-left: auto;
   margin-right: 20px;
   margin-top: 20px;
   margin-bottom: 20px;
   flex-direction: column;
-  width: 100%;
+  width: 60%;
 }
 
 .name-title {
   text-transform: uppercase;
   text-align: left;
-  font-size: 60px;
+  font-size: 40px;
 }
 .sous-title {
   text-transform: uppercase;
   text-align: left;
   margin-top: -15px;
-  font-size: 20px;
+  font-size: 15px;
   color: lightgrey;
   margin-bottom: 10px;
 }
-
-// DESCRIB //
-.card-details {
-  display: flex;
-  justify-content: space-evenly;
-  border-radius: 20px;
-  box-shadow: 20px;
-  box-shadow: 3px 3px 15px rgba(0,0,0,0.2);
+.paragraphedescrib {
+  font-size: 14px;
+  margin-top: -5px;
+  color: darkgrey;
 }
 
 // CARD - 1 //
@@ -60,11 +58,11 @@
 }
 .card-format img {
   height: 100%;
-  width: 200px;
+  width: 15%;
   object-fit: cover;
 }
 .card-format h2 {
-  font-size: 16px;
+  font-size: 12px;
   font-weight: bold;
   margin: 0;
 }
@@ -80,17 +78,11 @@
   padding-bottom: 15px;
   padding-right: 20px;
   height: 100%;
-  width: 100%;
 }
 .name-title-describ {
   text-transform: uppercase;
   text-align: left;
-  font-size: 60px;
-}
-.paragraphedescrib {
-  font-size: 14px;
-  margin-top: -15px;
-  color: darkgrey;
+  font-size: 40px;
 }
 
 // CARD - 2 //
@@ -106,7 +98,7 @@
 }
 .card-format2 img {
   height: 100%;
-  width: 200px;
+  width: 15%;
   object-fit: cover;
 }
 
@@ -136,6 +128,9 @@
   margin-bottom: 20px;
 }
 
+#margin0 {
+  margin-bottom: 0;
+}
 
 // LIGNE //
 .separation {
@@ -143,8 +138,8 @@
   width: 1px;
   background-color: lightgrey;
   display: inline-block;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 40px;
+  margin-right: 40px;
   border-radius: 20px;
 }
 

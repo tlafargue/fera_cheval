@@ -59,11 +59,11 @@ un = Horse.create(
   specialty: 'Saut de Haies',
   city: 'Rennes',
   age: 6,
-  sex: 'femelle',
+  sex: 'Femelle',
   price: 100,
-  description: 'Mixame est une magnifique jument de race des "Sauteurs". C est une jument au tempérament.
-  Fougueuse, joueuse et perspicace. Elle est très intelligente et capable de lire des livres.
-  Elle sera parfaite pour tous vos événements en relation avec le saut !'
+  description: "Mixame est une magnifique jument de la race des 'Sauteuses'. Cette jument est
+  fougueuse, joueuse et perspicace. Elle est très intelligente et capable de lire des livres, son préféré '50 Nuances de poney'
+  Elle sera parfaite pour tous vos événements en relation avec le saut !"
 )
 photo = URI.open("https://lafargue.cc/horses/C1.png")
 un.photo.attach(io: photo, filename: "maxime_d.png", content_type: "image/png")
@@ -76,13 +76,13 @@ deux = Horse.create(
   name: 'Tornado',
   breed: 'Percheron',
   specialty: 'Cheval de trait',
-  city: 'Rennes',
+  city: 'Zapatta-sur-Saune',
   age: 12,
-  sex: 'mâle',
+  sex: 'Mâle',
   price: 250,
-  description: 'Sa particularité ? Il a fait plusieurs tournages de films, retenu notamment pour ceux en noir et blanc.
-  Ce héros à déjà tourné dans des films tels que "Madagascar 1","Madagascar 2","Madagascar 3" et
-  "Alibi 2"(en tant que figurant) !'
+  description: "Sa particularité ? Il a fait plusieurs tournages de films, retenu notamment pour ceux en noir et blanc.
+  Ce héros à déjà tourné dans des films tels que 'Madagascar 1','Madagascar 2','Madagascar 3' et
+  'Alibi 2'(en tant que figurant) !"
 )
 photo = URI.open("https://lafargue.cc/horses/C2.png")
 deux.photo.attach(io: photo, filename: "tornado.png", content_type: "image/png")
@@ -95,12 +95,12 @@ trois = Horse.create(
   name: 'Cacahuète',
   breed: 'Appaloosa',
   specialty: 'Cheval de course',
-  city: 'Paris',
+  city: 'Hapéritiff',
   age: 7,
-  sex: 'mâle',
+  sex: 'Mâle',
   price: 125,
-  description: 'Cacahuète est un bel étalon bien membré, avec une belle rose grise flamboyante !
-  Il sera parfait pour vous accompagner à vos apéros. C est un cheval spécialement conçu pour porter vos courses !'
+  description: "Cacahuète est un bel étalon bien membré, d'ou son prénom..., avec une belle robe grise flamboyante !
+  Il sera parfait pour vous accompagner à vos apéros. C'est un cheval spécialement conçu pour porter vos courses !"
 )
 photo = URI.open("https://lafargue.cc/horses/C3.png")
 trois.photo.attach(io: photo, filename: "cacahuete.png", content_type: "image/png")
@@ -115,12 +115,12 @@ quatre = Horse.create(
   specialty: 'Cheval de gala',
   city: 'Versaille',
   age: 5,
-  sex: 'femelle',
+  sex: 'Femelle',
   price: 175,
-  description: 'Galopin est un magnifique cheval de race Frison.
+  description: "Galopin est un magnifique cheval de la race Frison.
   Il a une robe brune profonde et un tempérament doux.
-  Avec son pas cadencé et sa démarche élégante, elle est parfaite pour les promenades en forêt ou
-  les randonnées paisibles.'
+  Avec son pas cadencé et sa démarche élégante, elle fera tournée des tête et est parfaite pour les promenades en forêt ou
+  les randonnées paisibles."
 )
 photo = URI.open("https://lafargue.cc/horses/C4.png")
 quatre.photo.attach(io: photo, filename: "marguerite.png", content_type: "image/png")
@@ -133,12 +133,12 @@ cinq = Horse.create(
   name: 'Roger',
   breed: 'Selle française',
   specialty: 'Cheval de course',
-  city: 'Saint-Vergeron',
+  city: 'Saint-Vergeront',
   age: 6,
-  sex: 'mâle',
+  sex: 'Mâle',
   price: 250,
-  description: 'Je mets à louer mon petit Roger, enfin petit... Il est beau, gentil et
-  adore le cosplay et notamment son héros préférer "Robin des pintes."'
+  description: "Je mets à louer mon petit Roger, enfin petit... Il est beau, gentil et
+  adore le cosplay et notamment son héros préféré 'Robin des pintes.'"
 )
 photo = URI.open("https://lafargue.cc/horses/C5.png")
 cinq.photo.attach(io: photo, filename: "roger.png", content_type: "image/png")
@@ -153,11 +153,11 @@ six = Horse.create(
   specialty: 'Cheval de trait',
   city: 'Angers',
   age: 10,
-  sex: 'mâle',
+  sex: 'Mâle',
   price: 350,
-  description: 'George est un cheval de course, qui n a jamais connu la défaite.
-  Il humilie tous ses adversaires d une centaine de mettre.
-  Avec ces derniers gains, il s est même offert une Rolex !'
+  description: "George est un cheval de course qui n'a jamais connu la défaite.
+  Il humilie tous ses adversaires d'une centaine de mètres.
+  Avec ses derniers gains, il s'est même offert une Rolex !"
 )
 photo = URI.open("https://lafargue.cc/horses/C6.png")
 six.photo.attach(io: photo, filename: "georges.png", content_type: "image/png")
@@ -172,11 +172,11 @@ sept = Horse.create(
   specialty: 'Promenade',
   city: 'Poudlard',
   age: 1664,
-  sex: 'femelle',
+  sex: 'Femelle',
   price: 750,
-  description: 'Cé une othentik lit-corne, pas de preuve d achat à l appuie, mé je vous le certifie !
+  description: "Cé une othentik lit-corne, pas de preuve d achat à l'appuie, mé je vous le certifie !
   Je la mé à loué car askip ca rapporte pas mal, et en ce moment
-  jé besoin de thune pour payer mon loyer et mes conso perso'
+  jé besoin de moula pour payer mon loyer et mes conso-perso"
 )
 photo = URI.open("https://lafargue.cc/horses/C7.png")
 sept.photo.attach(io: photo, filename: "brenda.png", content_type: "image/png")
@@ -186,15 +186,16 @@ sept = Horse.all.last
 ### H8 ###
 huit = Horse.create(
   user: utrois,
-  name: 'Jean-Mimi',
+  name: 'Jeanbombeur',
   breed: 'Frison',
   specialty: 'Promenade',
-  city: 'Lampaul',
+  city: 'Piknique',
   age: 10,
-  sex: 'mâle',
+  sex: 'Mâle',
   price: 75,
-  description: 'Je loue mon propriétaire pour la modite somme de 75€, car en vrai dans le fond il est gentil,
-  mais il ne sait pas faire grand chose dans le fond'
+  description: "Je loue mon propriétaire pour la modique somme de 75€ TTC, car en vrai dans le fond il est gentil,
+  mais il ne sait pas faire grand chose... Il n'a pas été retenu dans la dernière saison de l'amour est dans le pré...
+  Il cherche aujourd'hui une belle jument qui saura le combler de bonheur."
 )
 photo = URI.open("https://lafargue.cc/horses/C8.png")
 huit.photo.attach(io: photo, filename: "jeanmimi.png", content_type: "image/png")
@@ -207,12 +208,12 @@ neuf = Horse.create(
   name: 'Simba',
   breed: 'Percheron',
   specialty: 'Cheval de Gala',
-  city: 'Angers',
+  city: 'Savane-seine',
   age: 6,
-  sex: 'mâle',
+  sex: 'Mâle',
   price: 150,
-  description: 'Loue jolie cheval pour des prestations mariages, anniversaires, séminaires, enterrement, barmitzva,
-  repas de foot, sainte-barbe, festivale, concert, gala, parade.'
+  description: "Loue joli cheval pour des prestations : mariages, anniversaires, séminaires, enterrements, barmitzvas,
+  repas de foot, sainte-barbes, festivals, concerts, galas, parades, crémaillères, comédies musicales, films, EVG, EVJF, IVG..."
 )
 photo = URI.open("https://lafargue.cc/horses/C9.png")
 neuf.photo.attach(io: photo, filename: "simba.png", content_type: "image/png")
@@ -225,12 +226,12 @@ dix = Horse.create(
   name: 'Mickey',
   breed: 'Trotteur',
   specialty: 'Promenade',
-  city: 'Nantes',
+  city: 'Disney',
   age: 10,
-  sex: 'mâle',
+  sex: 'Mâle',
   price: 50,
-  description: 'Je loue mon petit Mickey, un cheval blanc, sans trop d avenir,
-  c est aussi pour ca que le mes à louer pour des promenades'
+  description: "Je loue mon petit Mickey, un cheval blanc, sans trop d'avenir,
+  c'est aussi pour cela que je le mets à louer pour des promenades"
 )
 photo = URI.open("https://lafargue.cc/horses/C10.png")
 dix.photo.attach(io: photo, filename: "mickey.png", content_type: "image/png")
@@ -243,12 +244,12 @@ onze = Horse.create(
   name: 'Hugo',
   breed: 'Pur sang crêpe',
   specialty: 'Course',
-  city: 'Limoges',
+  city: 'Crêpes-Land',
   age: 12,
-  sex: 'mâle',
+  sex: 'Mâle',
   price: 109,
-  description: 'Hugo est un cheval très symape, il sait faire à manger et adore par dessus tout faire la vaisselle.
-  La photo ne le met pas à son avantage mais c est la réalité il est moche... Mais il est gentil, mais moche...'
+  description: "Hugo est un cheval très sympa, il sait faire à manger et adore par dessus tout faire la vaisselle.
+  La photo ne le met pas à son avantage mais c'est la réalité : il est moche... Mais il est gentil, mais moche..."
 )
 photo = URI.open("https://lafargue.cc/horses/C11.png")
 onze.photo.attach(io: photo, filename: "bernadette.png", content_type: "image/png")
@@ -261,13 +262,13 @@ douze = Horse.create(
   name: 'Franck',
   breed: 'Selle français',
   specialty: 'Promenade',
-  city: 'Vannes',
+  city: 'Chateaux-Gontier',
   age: 9,
-  sex: 'femelle',
+  sex: 'Femelle',
   price: 163,
-  description: 'Hugo est une jument vraiment très symape, elle est gracieuse et prestigieuse.
-  Elle est douce et affectueuse, et convient parfaitement aux cavaliers débutants ou aux familles à la
-  recherche dune expérience de cheval tranquille.'
+  description: "Franck est une jument vraiment très sympa, elle est gracieuse et prestigieuse.
+  Elle est douce, affectueuse et convient parfaitement aux cavaliers débutants ou aux familles à la
+  recherche d'une expérience de cheval tranquille."
 )
 photo = URI.open("https://lafargue.cc/horses/C12.png")
 douze.photo.attach(io: photo, filename: "franck.png", content_type: "image/png")
@@ -280,12 +281,12 @@ treize = Horse.create(
   name: 'Anna',
   breed: 'Pur-sang irlandais',
   specialty: 'Cheval de "petite-taille"',
-  city: 'Dunkerque',
+  city: 'Dublin',
   age: 8,
-  sex: 'femelle',
+  sex: 'Femelle',
   price: 200,
-  description: 'Je met à louer Lolita une jument de "petite-taille" dédier à un public de "petite-taille",
-  je fournis également un escabeau avec !'
+  description: "Je mets à louer Anna une jument de 'petite-taille' dédiée à un public de 'petite-taille',
+  je fournis également un marche-pied ou échelle à vous de voir !"
 )
 photo = URI.open("https://lafargue.cc/horses/C13.png")
 treize.photo.attach(io: photo, filename: "lolita.png", content_type: "image/png")
