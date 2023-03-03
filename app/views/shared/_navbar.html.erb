@@ -12,9 +12,9 @@
         <div class="dropdown">
           <%= cl_image_tag current_user.photo.key, class: "avatar current-user", data: { bs_toggle: "dropdown" } %>
           <ul class="dropdown-menu dropdown-menu-end p-3">
-            <li><%= link_to "Profile", profile_path, class: "pmured-link" %></li>
-            <li><%= link_to "Mes chevaux", owner_horses_path, class: "pmured-link" %></li>
-            <li><%= link_to "Se déconnecter", destroy_user_session_path, data: { "turbo-method": :delete }, class: "pmured-link" %></li>
+            <li><%= link_to "Profile", profile_path, class: "pmured-link text-decoration-none" %></li>
+            <li><%= link_to "Mes chevaux", owner_horses_path, class: "pmured-link text-decoration-none" %></li>
+            <li><%= link_to "Se déconnecter", destroy_user_session_path, data: { "turbo-method": :delete }, class: "pmured-link text-decoration-none" %></li>
           </ul>
         </div>
       </li>
@@ -23,8 +23,8 @@
         <div class="dropdown">
           <%= image_tag "https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F008%2F442%2F086%2Foriginal%2Fillustration-of-human-icon-user-symbol-icon-modern-design-on-blank-background-free-vector.jpg&sp=1677839053T6f9d7dd49c983a9bfbd3e4afa60bf46add84e538686d041ebd3ab9ad23bc5b40", class: "avatar current-user", data: { bs_toggle: "dropdown" } %>
           <ul class="dropdown-menu dropdown-menu-end p-3">
-            <li><%= link_to "Se connecter", new_user_session_path, class: "pmured-link" %></li>
-            <li><%= link_to "S'inscrire", new_user_registration_path, class: "pmured-link" %></li>
+            <li><%= link_to "Se connecter", new_user_session_path, class: "pmured-link text-decoration-none" %></li>
+            <li><%= link_to "S'inscrire", new_user_registration_path, class: "pmured-link text-decoration-none" %></li>
           </ul>
         </div>
       </li>
